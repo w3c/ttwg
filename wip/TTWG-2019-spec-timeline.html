@@ -4,8 +4,14 @@
   <meta charset="utf-8">
   <title>TTWG Specifications Timeline</title>
   <style>
-    td, th {
-      border: 1px solid #ddd;
+    table {
+      border-spacing: 2px;
+      border-collapse: collapse;
+      text-indent: 0;
+    }
+    tr, td, th {
+      border: 1px solid #aaa;
+      background-color: #f2f2f2;
       padding: 1px;
     }
     thead th {
@@ -13,6 +19,42 @@
     }
     td.header {
       text-align: center;
+    }
+    td.done {
+      background-color: #CCCCCC;
+    }
+    td.todo {
+      background-color: #ff9999;
+    }
+    .auto {
+      background-color: #ffff50;
+    }
+    .auto::before {
+      content: "➟ ";
+    }
+    h1 {
+      font-size: 2em;
+      line-height: 1.25em;
+      font-family: 'Helvetica Neue', Roboto, Calibri, 'Segoe UI', helvetica, sans-serif;
+      }
+    p {
+      margin-bottom: 1em;
+      }
+    h2 {
+      margin-top: 3em;
+      }
+    h3 {
+      margin-top: 1.5em;
+      }
+    body {
+      font-family: 'Helvetica Neue', 'Segoe UI', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-text-size-adjust: 100%;
+      -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      color: #000;
     }
   </style>
 </head>
@@ -24,6 +66,8 @@
 <ul>
   <li>All dates are in DD-MM-YYYY</li>
   <li><a href="https://www.w3.org/Guide/transitions">Steps on transitions and publications</a></li>
+  <li>Milestones which are automatically placed from previous event have <span class="auto">yellow</span> background and are preceded by ➟.</li>
+  <li>Expected dates that are shown in the milestone calculator but that are not defined relative to the previous event by the Process relative to the previous event are marked with brackets, for example "(25-04-2020)".</li>
 </ul>
 
 <h3>Upcoming moratoria on publications</h3>
@@ -36,11 +80,11 @@
 <h2>Timeline</h2>
 
 <ul>
-  <li><a href="#fpwd">Sepcs from FPWD</a></li>
-  <li><a href="#cr">From CR</a></li>
+  <li><a href="#fpwd">From FPWD to CR</a></li>
+  <li><a href="#cr">From CR to Rec</a></li>
 </ul>
 
-<h3 id="fpwd">From FPWD</h3>
+<h3 id="fpwd">From FPWD to CR</h3>
 
 <table>
 <thead>
@@ -74,7 +118,7 @@
 </tr>
 <tr>
   <td>Days to Recommendation (Milestones)</td>
-  <td colspan="2"><a href="https://w3c.github.io/spec-releases/milestones/?fpwd=2019-11-28">FPWD at 28-11-2019</a></td>
+  <td colspan="2"><a href="https://w3c.github.io/spec-releases/milestones/?cr=2020-03-24">CR at 24-03-2020</a></td>
   <td colspan="2"><a href="https://w3c.github.io/spec-releases/milestones/?fpwd=2020-01-31">FPWD by 31-01-2020</a></td>
   <td colspan="2"><a href="https://w3c.github.io/spec-releases/milestones/?fpwd=2020-01-31">FPWD by 31-01-2020</a></td>
   <td colspan="2"><a href="https://w3c.github.io/spec-releases/milestones/?fpwd=2020-01-31">FPWD by 31-01-2020</a></td>
@@ -106,7 +150,7 @@
   <td>10-10-2019</td><td class="done">done</td>
 </tr>
 <tr>
-  <td>End of CfC</td>
+  <td class="auto">End of CfC</td>
   <td>25-10-2019</td><td class="done">done</td>
   <td>25-10-2019</td><td class="done">done</td>
   <td>25-10-2019</td><td class="done">done</td>
@@ -148,7 +192,7 @@
   <td></td><td class=""></td>
 </tr>
 <tr>
-  <td>start of a 150d IPP exclusion opportunity (auto)</td>
+  <td class="auto">start of a 150d IPP exclusion opportunity (auto)</td>
   <td>28-11-2019</td><td class="done"><a href="https://lists.w3.org/Archives/Public/public-tt/2019Nov/0040.html">done</a></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
@@ -167,7 +211,7 @@
   <td colspan="9" class="header">CR timeline</td>
 </tr>
 <tr>
-  <td>Wide review period ends</td>
+  <td class="auto">Wide review period ends</td>
   <td>08-04-2020</td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
@@ -182,63 +226,63 @@
 </tr>
 <tr>
   <td>Author sends editor's draft for review</td>
-  <td></td><td class=""></td>
+  <td>27-02-2020</td><td class="done"><a href="https://lists.w3.org/Archives/Public/public-tt/2020Feb/0017.html">done</a></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
 </tr>
 <tr>
   <td>Chair sends CfC (14d period)</td>
-  <td></td><td class=""></td>
+  <td>27-02-2020</td><td class="done"><a href="https://lists.w3.org/Archives/Public/public-tt/2020Feb/0017.html">done</a></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
 </tr>
 <tr>
-  <td>End of CfC</td>
-  <td></td><td class=""></td>
+  <td class="auto">End of CfC</td>
+  <td>12-03-2020</td><td class="done"><a href="https://www.w3.org/2020/03/12-tt-minutes.html#t09">done</a></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
 </tr>
 <tr>
   <td>Author sends final CR document</td>
-  <td></td><td class=""></td>
+  <td>19-03-2020</td><td class="done">done</td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
 </tr>
 <tr>
   <td>Staff check and upload to /TR/</td>
-  <td></td><td class=""></td>
+  <td>22-03-2020</td><td class="done">done</td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
 </tr>
 <tr>
   <td>Transition request (~1w for review)</td>
-  <td></td><td class=""></td>
+  <td>20-03-2020</td><td class="done"><a href="https://github.com/w3c/transitions/issues/234">done</a></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
 </tr>
 <tr>
   <td>Staff sends publication request, announcement draft</td>
-  <td></td><td class=""></td>
+  <td>22-03-2020</td><td class="done">done</td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
 </tr>
 <tr>
   <td>CR publication</td>
-  <td></td><td class=""></td>
+  <td>24-03-2020</td><td class="done"><a href="https://www.w3.org/TR/2020/CR-ttml-imsc1.2-20200324/">done</a></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
 </tr>
 <tr>
-  <td>Start of 60d IPP exclusion opportunity</td>
-  <td></td><td class=""></td>
+  <td class="auto">Start of 60d IPP exclusion opportunity</td>
+  <td>24-03-2020</td><td class="done"><a href="https://lists.w3.org/Archives/Public/public-tt/2020Mar/0023.html">done</a></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
@@ -249,8 +293,8 @@
   <td colspan="9" class="header">PR timeline</td>
 </tr>
 <tr>
-  <td>Deadline for comments</td>
-  <td></td><td class=""></td>
+  <td class="auto">Deadline for comments</td>
+  <td>21-04-2020</td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
@@ -264,13 +308,13 @@
 </tr>
 <tr>
   <td>Chair sends CfC (14d period)</td>
-  <td></td><td class=""></td>
+  <td>(25-04-2020)</td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
 </tr>
 <tr>
-  <td>End of CfC</td>
+  <td class="auto">End of CfC</td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
@@ -318,29 +362,29 @@
   <td colspan="9" class="header">REC timeline</td>
 </tr>
 <tr>
-  <td>Start of AC review (automatically)</td>
+  <td class="auto">Start of AC review (automatically)</td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
 </tr>
 <tr>
-  <td>End of AC review</td>
+  <td class="auto">End of AC review</td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
 </tr>
 <tr>
-  <td>Last day of 1st (FPWD) exclution opportunity (150d)</td>
-  <td></td><td class=""></td>
+  <td class="auto">Last day of 1st (FPWD) exclution opportunity (150d)</td>
+  <td>26-04-2020</td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
 </tr>
 <tr>
-  <td>Last day of 2nd (CR) exclution opportunity (60d)</td>
-  <td></td><td class=""></td>
+  <td class="auto">Last day of 2nd (CR) exclution opportunity (60d)</td>
+  <td>23-05-2020</td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
@@ -365,7 +409,7 @@
 </table>
 
 
-<h3 id="cr">From CR</h3>
+<h3 id="cr">From CR to Rec</h3>
 
 <table>
 <thead>
@@ -436,7 +480,7 @@
   <td colspan="9" class="header">PR timeline</td>
 </tr>
 <tr>
-  <td>Deadline for comments</td>
+  <td class="auto">Deadline for comments</td>
   <td>25-02-2020</td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
@@ -457,7 +501,7 @@
   <td></td><td class=""></td>
 </tr>
 <tr>
-  <td>End of CfC</td>
+  <td class="auto">End of CfC</td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
@@ -505,29 +549,29 @@
   <td colspan="9" class="header">REC timeline</td>
 </tr>
 <tr>
-  <td>Start of AC review (automatically)</td>
+  <td class="auto">Start of AC review (automatically)</td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
 </tr>
 <tr>
-  <td>End of AC review</td>
+  <td class="auto">End of AC review</td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
 </tr>
 <tr>
-  <td>Last day of 1st (FPWD) exclution opportunity (150d)</td>
-  <td></td><td class=""></td>
+  <td class="auto">Last day of 1st (FPWD) exclution opportunity (150d)</td>
+  <td>n/a?</td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
 </tr>
 <tr>
-  <td>Last day of 2nd (CR) exclution opportunity (60d)</td>
-  <td></td><td class=""></td>
+  <td class="auto">Last day of 2nd (CR) exclution opportunity (60d)</td>
+  <td>28-03-2020</td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
   <td></td><td class=""></td>
