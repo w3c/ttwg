@@ -18,6 +18,13 @@
         edDraftURI: "https://w3c.github.io/ttwg/boilerplate/registry",
         group: "wg/timed-text",
         wgPublicList: "public-tt",
+        xref: ["w3c-process"],
+        localBiblio: {
+          ttwg: {
+            title: "Timed Text Working Group",
+            href: "https://www.w3.org/AudioVideo/TT/"
+          }
+        }
       };
     </script>
   </head>
@@ -25,7 +32,7 @@
     <section id="abstract">
       <p>This is a boilerplate Registry Definition as required for Registries by [[w3c-process]].</p>
       <p>The intent is that this boilerplate can form the basis of [=w3c registries=] for
-        the W3C <a href="https://www.w3.org/AudioVideo/TT/">Timed Text Working Group</a> (TTWG).</p>
+        the W3C <dfn data-abbr="TTWG"><a href="https://www.w3.org/AudioVideo/TT/">Timed Text Working Group</a></dfn>.</p>
       <p>See discussion <a href="https://github.com/w3c/ttwg/discussions/241">w3c/ttwg#241</a> for
         details of the assumptions made to generate this document.</p>
     </section>
@@ -39,22 +46,112 @@
       <h2>Introduction</h2>
       <p>Some informative introductory text about this Registry.</p>
     </section>
-    <section>
+    <section id="registry-definition">
       <h2>Registry Definition</h2>
       <p class="ednote">Insert sections on custodianship and change process.</p>
+      <section id="custodianship">
+        <h3>Custodianship</h3>
+        <p>The <dfn data-cite="w3c-process#custodian">custodian</dfn> of this Registry is the <a>TTWG</a>. 
+          If the <a>TTWG</a> is unable to fulfil the role of <a>custodian</a>,
+          for example if it has been <a data-cite="w3c-process#GeneralTermination">closed</a>,
+          the <a>custodian</a> in lieu is the <a data-cite="w3c-process#Team">W3C Team</a>.
+        </p>
+        <p class="issue" data-number="244"></p>
+      </section>
+      <section id="change-process">
+        <h3>Change Process</h3>
+        <section id="requesting-a-change">
+          <h4>Requesting a change</h4>
+          <p>Changes to this [=W3C Registry=] MUST be requested (the <dfn>change request</dfn>) using any one of the following options:</p>
+          <ul>
+            <li>Open an issue on the Registry Table's version control system;</li>
+            <li>Send an email to the <a>TTWG</a>'s public email reflector
+              <a href="mailto:public-tt@w3.org">public-tt@w3.org</a></li>
+          </ul>
+          <p>The <a>change request</a> MUST include enough information for the <a>custodian</a>
+            to be able to identify all of:</p>
+          <ul>
+            <li>The Registry Table;</li>
+            <li>The Entries being proposed for addition;</li>
+            <li>The Provisional Entries for which changes are being proposed;</li>
+            <li>The Entries being proposed for a Status change;</li>
+            <li>Details of the requested changes for each Entry;</li>
+            <li>The motivation for making the requested changes;</li>
+            <li>Any other supporting information, for example real world usage statistics;</li>
+          </ul>
+          <p>The proposer of the change MAY open a pull request (or equivalent) on
+            the Registry Table's version control system, with that pull request
+            containing the proposed changes. If a pull request is opened then
+            a corresponding issue MUST also be opened and
+            the pull request MUST be linked to that issue.</p>
+          <aside class="note">A pull request representing the proposals made in the <a>change request</a>
+            is required before <a>TTWG</a> review can proceed.</aside>
+        </section>
+        <section id="change-request-assessment">
+          <h4>Change request assessment process</h4>
+          <p>The process for assessing a <a>change request</a> depends on the <a>custodian</a>.</p>
+          <section id="ttwg-change-request-assessment">
+            <h5>Custodian is TTWG</h5>
+            <p>If the <a>custodian</a> is the <a>TTWG</a>:</p>
+            <ul>
+              <li>If the change proposer did not open a pull request
+                on the Registry Table's version control system,
+                then assessment is paused until a TTWG member
+                has opened such a pull request,
+                which MUST represent the requested changes
+                and MUST be linked to a related issue.</li>
+              <li>The TTWG follows its Decision Policy to review
+                the proposal in the pull request.</li>
+              <li>At the end of the Decision Review Period
+                if a TTWG Chair declares that there is consensus to approve,
+                the <a>change request</a> is approved.</li>
+              <li>In the absence of consensus to approve the expectation is
+                that a discussion will happen, to include the
+                change requester.
+                The result of this discussion can be any one of:
+                <ol>
+                  <li>the <a>change request</a> is abandoned;</li>
+                  <li>the <a>change request</a> is modified for another review;</li>
+                  <li>if the discussion resolves the objections,
+                    and a TTWG Chair declares consensus to approve,
+                    the <a>change request</a> can be approved.</li>
+                </ol>
+              </li>
+            </ul>
+            <p>An approved <a>change request</a> is enacted by merging its
+              related pull request into the Registry Table's version control system
+              and publishing the updated version of the Registry Table.</p>
+          </section>
+          <section id="team-change-request-assessment">
+            <h5>Custodian is the W3C Team</h5>
+            <p>If the <a>custodian</a> is the <a>W3C Team</a>,
+              the Team MUST seek wide review of the <a>change request</a> and
+              offer a review period of at least 4 weeks,
+              before assessing from the responses received
+              if there is consensus amongst the respondents.</p>
+            <p>The Team MAY require a pull request on the Registry Table's
+              version control system to be
+              opened as the basis of the review.
+            </p>
+            <p>If there is such consensus,
+              the Team MUST make the proposed changes.</p>
+          </section>
+        </section>
+      </section>
       <h3>Registry Table(s)</h3>
       <p>This section defines constraints on Registry Tables. Each Registry Table consists of a the set of Registry Entries.</p>
       <section id="registry-entries">
         <h4>Registry Entries</h4>
-        <p>Each registry entry has a status, a unique key, and
-          if appropriate, other fields, for example any notes,
+        <p>Each registry entry has a <a>status</a>, a unique <dfn>key</dfn>, and
+          if appropriate, other <dfn>fields</dfn>, for example any notes,
           a description, or a reference to some other
           defining entity.
         </p>
+        <p>The Registry Table definition MUST define the <a>fields</a> and the <a>key</a> to be used in each Registry entry.</p>
 
         <section id="registry-entry-status">
           <h5>Status</h5>
-          <p>The registry entry status field reflects the maturity of that entry. Permitted values are:</p>
+          <p>The registry entry <dfn>status</dfn> field reflects the maturity of that entry. Permitted values are:</p>
           <pre>
             Provisional
             Final
@@ -63,26 +160,31 @@
           <p>No other values are permitted.</p>
           <section id="provisional-entry">
             <h6>Provisional</h6>
-            <p>Registry entries with a status of <code>Provisional</code> MAY be changed, made final, deprecated or deleted.</p>
-            <p>Registry entry keys in Provisional entries that were deleted MAY be reused.</p>
+            <p>Registry entries with a status of <dfn><code>Provisional</code></dfn> MAY be changed or deleted.
+              Their status may be changed to <a><code>Final</code></a> or <a><code>Deprecated</code></a>.</p>
+            <p>Registry entry <a>keys</a> in <a><code>Provisional</code></a> entries that were deleted MAY be reused.</p>
           </section>
           <section id="final-entry">
             <h6>Final</h6>
-            <p>Registry entries with a status of <code>Final</code> MAY be deprecated and MUST NOT be deleted or changed.</p>
-            <p>Registry entry keys in Final entries MUST NOT be reused.</p>
+            <p>Registry entries with a status of <dfn><code>Final</code></dfn> MUST NOT be deleted or changed.
+              Their status MAY be changed to <a><code>Deprecated</code></a>.</p>
+            <p>Registry entry <a>keys</a> in <a><code>Final</code></a> entries MUST NOT be reused.</p>
           </section>
           <section id="deprecated-entry">
             <h6>Deprecated</h6>
-            <p>Registry entries with a status of <code>Deprecated</code> MAY be reinstated to Final, and MUST NOT be deleted or changed.</p>
-            <p>Registry entry keys in Deprecated entries that were previously Provisional and never Final MAY be reused.</p>
-            <p>Registry entry keys in Provisional entries that were previously Final MUST NOT be reused.</p>
+            <p>Registry entries with a status of <dfn><code>Deprecated</code></dfn> MUST NOT be deleted or changed.
+              Their status MAY be changed to <a><code>Final</code></a>.</p>
+            <p>Registry entry <a>keys</a> in <a><code>Deprecated</code></a> entries that were previously <code>Provisional</code> and never <a><code>Final</code></a> MAY be reused.</p>
+            <p>Registry entry <a>keys</a> in <a><code>Provisional</code></a> entries that were previously <a><code>Final</code></a> MUST NOT be reused.</p>
           </section>
         </section>
       </section>
     </section>
-    <section>
+    <section id="registry-table">
       <h2>Registry Table(s)</h2>
       <p>This section contains the Registry Table, i.e. the set of registry entries.</p>
+      <p>The Registry Table MUST provide a link to the version control system against
+        which any issues and pull requests can be opened.</p>
       <p class="ednote">Insert empty example table here.</p>
     </section>
     <section id="conformance">
@@ -98,8 +200,29 @@
           the referencing specifications,
           there is no need to list those referencing specifications
           in the Registry itself; doing so is optional.
+          Listing referencing specifications carries an
+          additional maintenance overhead.
         </p>
       </section>
+    </section>
+
+    <section id="index" class="appendix">
+      <!-- All the terms will magically appear here -->
+    </section>
+
+    <section class="appendix" id="application-checklist">
+      <h2>Checklist for applying this boilerplate to a real Registry</h2>
+      <p>When adopting this boilerplate for use in a Registry,
+        the following checklist may be helpful:</p>
+      <ul>
+        <li>Make a copy of this boilerplate and work on it in the appropriate repository;</li>
+        <li>Write introductory text explaining the Registry, it's purpose and expected usage;</li>
+        <li>Check that the custodianship rules are correct;</li>
+        <li>Check that the change process is correct;</li>
+        <li>Define the <a>key</a> and other registry entry <a>fields</a>;</li>
+        <li>Create a table and populate it with any known values;</li>
+        <li>Update any referencing specifications to link to it.</li>
+      </ul>
     </section>
   </body>
 </html>
