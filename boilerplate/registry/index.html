@@ -162,20 +162,29 @@
             <h6>Provisional</h6>
             <p>Registry entries with a status of <dfn><code>Provisional</code></dfn> MAY be changed or deleted.
               Their status may be changed to <a><code>Final</code></a> or <a><code>Deprecated</code></a>.</p>
-            <p>Registry entry <a>keys</a> in <a><code>Provisional</code></a> entries that were deleted MAY be reused.</p>
+            <p>Registry entry <a>keys</a> in <a><code>Provisional</code></a> entries
+              that were later deleted MAY be reused.</p>
+            <p>Newly created registry entries SHOULD have status <a><code>Provisional</code></a>.</p>
           </section>
           <section id="final-entry">
             <h6>Final</h6>
             <p>Registry entries with a status of <dfn><code>Final</code></dfn> MUST NOT be deleted or changed.
               Their status MAY be changed to <a><code>Deprecated</code></a>.</p>
             <p>Registry entry <a>keys</a> in <a><code>Final</code></a> entries MUST NOT be reused.</p>
+            <p>Newly created registry entries MAY have status <a><code>Final</code></a>.</p>
           </section>
           <section id="deprecated-entry">
             <h6>Deprecated</h6>
             <p>Registry entries with a status of <dfn><code>Deprecated</code></dfn> MUST NOT be deleted or changed.
-              Their status MAY be changed to <a><code>Final</code></a>.</p>
-            <p>Registry entry <a>keys</a> in <a><code>Deprecated</code></a> entries that were previously <code>Provisional</code> and never <a><code>Final</code></a> MAY be reused.</p>
-            <p>Registry entry <a>keys</a> in <a><code>Provisional</code></a> entries that were previously <a><code>Final</code></a> MUST NOT be reused.</p>
+              Their status MAY be changed to <a><code>Final</code></a>
+              unless that would result in a duplicate <a>key</a> within the set of entries whose
+              status is either <a><code>Provisional</code></a> or <a><code>Final</code></a>.</p>
+            <p>Registry entry <a>keys</a> in <a><code>Deprecated</code></a> entries
+              that were previously <code>Provisional</code> and never <a><code>Final</code></a>
+              MAY be reused.</p>
+            <p>Registry entry <a>keys</a> in <a><code>Provisional</code></a> entries
+              that were previously <a><code>Final</code></a> MUST NOT be reused.</p>
+            <p>Newly created registry entries MUST NOT have status <a><code>Deprecated</code></a>.</p>
           </section>
         </section>
       </section>
