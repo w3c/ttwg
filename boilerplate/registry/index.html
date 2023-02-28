@@ -218,7 +218,34 @@
     <section id="registry-table">
       <h2>Registry Table(s)</h2>
       <p>This section contains the <a>registry table</a>, i.e. the set of <a>registry entries</a>.</p>
-      <p class="ednote">Insert empty example table here.</p>
+      <table class="simple">
+        <thead>
+          <th>Key</th>
+          <th>Status</th>
+          <th>Other fields</th>
+          <th>Notes</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>abc1</td>
+            <td>Provisional</td>
+            <td></td>
+            <td>This key reuses one that was deprecated without being Final</td>
+          </tr>
+          <tr>
+            <td>abc2</td>
+            <td>Final</td>
+            <td></td>
+            <td>This entry cannot be changed, but it can be Deprecated.</td>
+          </tr>
+          <tr>
+            <td>abc1</td>
+            <td>Deprecated</td>
+            <td></td>
+            <td>This was never made Final, and now it cannot be, because its key has been reused.</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
     <section id="conformance">
       <p>
