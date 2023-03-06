@@ -173,6 +173,14 @@
         <p>The <a>registry table</a> definition MUST define
           the <a>fields</a> and the <a>key</a> to be used
           in each <a>registry entry</a>.</p>
+        <aside class="note">It is possible to use any <a>field</a>
+          or combination of <a>fields</a> as the <a>key</a>.
+          For example a <a>field</a> called "4 Character Code"
+          might be used as the <a>key</a>.
+          Another example is two fields called "Short name" and
+          "Revision number" which, in combination,
+          might be used as the <a>key</a>.
+        </aside>
 
         <section id="registry-entry-status">
           <h5>Status</h5>
@@ -279,7 +287,8 @@
         <li>Write introductory text explaining the Registry, it's purpose and expected usage;</li>
         <li>Check that the custodianship rules are correct;</li>
         <li>Check that the change process is correct;</li>
-        <li>Define the <a>key</a> and other registry entry <a>fields</a>;</li>
+        <li>Define the registry entry <a>fields</a>;</li>
+        <li>Define which of the <a>fields</a> is/are used as the <a>key</a>;</li>
         <li>Create a table and populate it with any known values;</li>
         <li>Update any referencing specifications to link to it.</li>
       </ul>
